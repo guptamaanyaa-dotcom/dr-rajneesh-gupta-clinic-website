@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.625rem;
+        
+        /* Medical Blue & Green Theme - Light Mode */
+        --background: 0.99 0 0;
+        --foreground: 0.15 0 0;
+        --card: 1 0 0;
+        --card-foreground: 0.15 0 0;
+        --popover: 1 0 0;
+        --popover-foreground: 0.15 0 0;
+        
+        /* Primary: Soft Medical Blue */
+        --primary: 0.55 0.12 230;
+        --primary-foreground: 0.99 0 0;
+        
+        /* Secondary: Light Blue-Gray */
+        --secondary: 0.95 0.01 230;
+        --secondary-foreground: 0.25 0 0;
+        
+        /* Muted: Very Light Gray */
+        --muted: 0.96 0 0;
+        --muted-foreground: 0.50 0 0;
+        
+        /* Accent: Soft Green */
+        --accent: 0.92 0.02 150;
+        --accent-foreground: 0.25 0 0;
+        
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.99 0 0;
+        
+        --border: 0.90 0 0;
+        --input: 0.90 0 0;
+        --ring: 0.55 0.12 230;
+        
+        /* Medical Blue */
+        --medical-blue: 0.55 0.12 230;
+        
+        /* Medical Green */
+        --medical-green: 0.65 0.15 150;
+        
+        --chart-1: 0.646 0.222 41.116;
+        --chart-2: 0.6 0.118 184.704;
+        --chart-3: 0.398 0.07 227.392;
+        --chart-4: 0.828 0.189 84.429;
+        --chart-5: 0.769 0.188 70.08;
+    }
+
+    .dark {
+        --background: 0.15 0 0;
+        --foreground: 0.98 0 0;
+        --card: 0.20 0 0;
+        --card-foreground: 0.98 0 0;
+        --popover: 0.25 0 0;
+        --popover-foreground: 0.98 0 0;
+        
+        /* Primary: Lighter Medical Blue for dark mode */
+        --primary: 0.70 0.15 230;
+        --primary-foreground: 0.15 0 0;
+        
+        --secondary: 0.25 0 0;
+        --secondary-foreground: 0.98 0 0;
+        --muted: 0.25 0 0;
+        --muted-foreground: 0.65 0 0;
+        
+        /* Accent: Lighter Green for dark mode */
+        --accent: 0.35 0.05 150;
+        --accent-foreground: 0.98 0 0;
+        
+        --destructive: 0.704 0.191 22.216;
+        --destructive-foreground: 0.15 0 0;
+        --border: 1 0 0 / 10%;
+        --input: 1 0 0 / 15%;
+        --ring: 0.70 0.15 230;
+        
+        /* Medical Blue - adjusted for dark mode */
+        --medical-blue: 0.70 0.15 230;
+        
+        /* Medical Green - adjusted for dark mode */
+        --medical-green: 0.70 0.18 150;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+}
+
+@layer utilities {
+    .animate-fade-in {
+        animation: fadeIn 0.6s ease-in;
+    }
+    
+    .animate-fade-in-delay {
+        animation: fadeIn 0.8s ease-in 0.2s both;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
