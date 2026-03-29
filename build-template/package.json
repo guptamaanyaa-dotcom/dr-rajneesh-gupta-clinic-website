@@ -1,11 +1,9 @@
 {
   "name": "@caffeine/template-app",
   "type": "module",
-  "engines": {
-    "node": ">=16.0.0",
-    "pnpm": ">=7.0.0",
-    "npm": "please use pnpm"
-  },
+ "engines": {
+  "node": "18.x"
+},
   "scripts": {
     "build": "pnpm -r --if-present run build",
     "prebuild": "pnpm -r --if-present run prebuild",
