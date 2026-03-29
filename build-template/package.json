@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "pnpm -r --if-present run build",
-    "prebuild": "echo skipping prebuild on vercel",
+    "prebuild": "pnpm -r --if-present run prebuild",
     "pretest": "pnpm -r --if-present run prebuild",
     "start": "pnpm -r --if-present run start",
     "test": "pnpm -r --if-present run test"
